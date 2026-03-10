@@ -1,4 +1,7 @@
 function stringChop(str, size) {
+	if (str == null) {
+		return [];
+	}
 	var chunks = [];
 	var currChunk = "";
 	for(var index = 0; index < str.length; index++) {

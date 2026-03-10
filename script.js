@@ -1,5 +1,17 @@
 function stringChop(str, size) {
-  // your code here
+	var chunks = [];
+	var currChunk = "";
+	for(var index = 0; index < str.length; index++) {
+		if (index % size === 0 && index !== 0) {
+			chunks.push(currChunk);
+			currChunk = "";
+		}
+		currChunk += str[index];
+	}
+	if(currChunk !== "") {
+		chunks.push(currChunk);
+	}
+	return chunks;
 }
 
 // Do not change the code below
